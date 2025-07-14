@@ -28,7 +28,7 @@ jobs:
     - name: Windows, environment
       shell: cmd
       run: |
-        c:\msys64\usr\bin\pacman --noconfirm -S mingw-w64-x86_64-gettext-tools
+        c:\msys64\usr\bin\pacman --noconfirm -S mingw-w64-x86_64-gettext-tools mingw-w64-x86_64-texinfo
         choco install innosetup --version=5.6.1 --force
         @rem dir c:\
         @rem dir c:\tools
