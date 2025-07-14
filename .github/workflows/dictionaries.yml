@@ -33,17 +33,17 @@ jobs:
         @set PERL=c:/Strawberry/perl/bin/perl
         git submodule init
         git submodule update
-        call ./mk-cmake --vs140 --release --prime
+        call ./mk-cmake --vs143 --release --prime
         choco install innosetup --version=5.6.1 --force
 
     - name: compile and package
       shell: cmd
       run: |
-        call ./mk-cmake --vs140 --lang ALL
+        call ./mk-cmake --vs143 --lang ALL
         @exit 0
 
     - name: release
       uses: softprops/action-gh-release@v1
       with:
-       files: ./installer.vs140/*
+       files: ./installer.vs143/*
        draft: true
