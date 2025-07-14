@@ -224,7 +224,7 @@ foreach(dict_spec ${DICTIONARIES})
                 COMMENT "configure: ${DICTIONARY_FILE}"
                 COMMAND set "PATH=${MSVC_OUTPUT_DIRECTORY}/Release/bin;${BASH_PATH};%PATH%" ##FIXME: target
                 COMMAND set "ASPELL_FLAGS=--data-dir=../../../../submodule/aspell/data"
-                COMMAND ${BASH_PATH}/bash "-c" "./configure; make"
+                COMMAND ${BASH_PATH}/bash "-c" "./configure --enable-32-bit-hash-fun; make"
                 WORKING_DIRECTORY ${DICTIONARY_SOURCE_DIRECTORY}
                 )
 
